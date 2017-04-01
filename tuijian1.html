@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰点1</title>
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$(".banner_nav>ul>li").mouseover(function(){
+    			$(this).addClass("hover");
+    		});
+    		$(".banner_nav>ul>li").mouseout(function(){
+    			$(this).addClass("hover");
+    		});
+    	});
+    </script>
+
+    <style>
+    /* 基本标签样式  */
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre,fieldset, lengend, button, input, textarea,th, td {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font: 12px "Microsoft YaHei",Arial,"宋体",Helvetica,Verdana,Sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        outline: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    img {
+        border: 0;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    ol, ul, li {
+        list-style: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+    }
+
+    /*浮动*/
+    .fl { float: left;}
+
+    .fr { float: right;}
+
+    /*清除浮动*/
+    .clearfix {
+        overflow: auto;
+        word-wrap: break-word;
+        height: auto;
+        _height: 1%;
+    }
+
+    /* 主体内容样式 */
+
+    .main_banner{
+        background: url(images/banner1.jpg) no-repeat 0 0;
+        width: 1440px;
+        height: 481px;
+        margin: 0 auto;
+    }
+
+    .banner_nav {
+        margin-left: 118px;
+        width: 190px;
+        height: 481px;
+        background: #CCC;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        box-sizing: border-box;
+    }
+
+    .banner_nav a {
+        color: #fff;
+    }
+
+    .banner_nav ul {
+     position: relative;
+    }
+
+    .banner_nav ul li {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+    }
+
+    .banner_nav ul li img {
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+
+    .banner_nav ul li:hover {
+        background: #fd6933;
+        border: 1px solid #666666;
+        border-right: 0;
+    }
+
+    .banner_nav ul li .ul_son {
+        display: none;
+        padding: 0 15px;
+        background: #fd6933;
+        position: absolute;
+        left: 188px;
+        top: 45px;
+        width: 165px;
+        height: 138px;
+        border: 1px solid #666666;
+    }
+
+    .banner_nav ul li .ul_son li {
+        width: 160px;
+        border: 0 solid #000;
+        border-bottom: 2px dashed #FFF;
+    }
+
+    .banner_nav ul li .ul_son li:last-child {
+        border-bottom: 0 dashed #FFF;
+    }
+
+    .banner_nav ul li .ul_son li:hover {}
+
+    .banner_nav ul li:hover ul {
+        display: block;
+        background: #fd6933;
+    }
+
+    .main_center {
+        width: 1440px;
+        height: auto;
+        margin: 0 auto;
+        background: #FFF;
+    }
+
+    .main_center .tuijian_h {
+        margin: 20px auto 5px;
+        width: 1201px;
+    }
+
+    .main_center .tuijian_ul {
+        margin: 0 auto;
+        width: 1201px;
+        height: auto;
+    }
+
+    .main_center .tuijian_ul ul li {
+        display: inline;
+        float: left;
+        width: 218px;
+        height: 330px;
+        border: 1px solid #ededed;
+        margin: 20px 25px 20px 0;
+    }
+
+    .main_center .tuijian_ul ul li:last-child {
+        margin-right: 0;
+    }
+
+    .tuijian_font p {
+        font-size: 12px;
+        color: #666666;
+        padding-left: 8px;
+        line-height: 18px;
+        margin: 10px 0;
+    }
+
+    .tuijian_font p a {
+        color: #666666;
+    }
+
+    .tuijian_img {
+        margin: 2px 0 2px 2px;
+        vertical-align: middle;
+    }
+
+    .tuijian_price .p1 {
+        font-size: 18px;
+        color: #333333;
+        font-weight: bold;
+        margin-left: 8px;
+    }
+
+    .tuijian_price .p2 {
+        font-size: 22px;
+        color: #ff4400;
+        font-weight: bold;
+        margin-left: 8px;}
+
+    .tuijian_ad .p3 {
+        font-size: 12px;
+        color: #999999;
+        margin-top: 12px;
+    }
+
+    .tuijian_ad {
+        margin-right: 15px;
+    }
+
+    .tuijian_ad img {
+        margin-left: 18px;
+        vertical-align: bottom;
+    }
+    </style>
+</head>
+
+<body>
+<div class="main_banner">
+  <div class="banner_nav">
+    <ul>
+        <li><img src="images/tu1.png" /><a href="#">潮流女装</a></li>
+        <li><img src="images/tu2.png" /><a href="#">品牌男装</a>
+            <ul class="ul_son">
+              <li><a href="#">精品男装</a>
+              <li><a href="#">运动/户外鞋服</a>
+              <li><a href="#">运动/户外用品</a>
+            </ul>
+        </li>
+        <li><img src="images/tu3.png" /><a href="#">美妆个户</a></li>
+        <li><img src="images/tu4.png" /><a href="#">鞋包配件</a></li>
+        <li><img src="images/tu5.png" /><a href="#">食品酒水</a></li>
+        <li><img src="images/tu6.png" /><a href="#">家用电器</a></li>
+        <li><img src="images/tu7.png" /><a href="#">日用百货</a></li>
+        <li><img src="images/tu8.png" /><a href="#">母婴玩具</a></li>
+        <li><img src="images/tu9.png" /><a href="#">手机数码</a></li>
+        <li><img src="images/tu10.png" /><a href="#">图书音像</a></li>
+    </ul>
+  </div>
+</div>
+
+<!--精选推荐内容如下-->
+<div class="main_center">
+    <div class="tuijian_h"><img src="images/lanmu1.jpg" /></div>
+    <div class="tuijian_ul">
+        <ul class="clearfix">
+            <li>
+                <div class="tuijian_img"><img src="images/p1.jpg" /></div>
+                <div class="tuijian_font"><p><a href="#" target="_blank">韩版2015夏装新款女装青年时尚休闲圆领拼接修身条纹中腰短袖连衣裙</a></p></div>
+                <div class="tuijian_p">
+                    <div class="tuijian_price fl">
+                        <p class="p1">&yen;89</p>
+                        <p class="p2">-80</p>
+                    </div>
+                    <div class="tuijian_ad fr">
+                    <img src="images/tianmao.png" />
+                    <p class="p3">韩都衣舍旗舰店</p>
+                    </div>
+                </div>
+            </li><!--产品展示模块 -->
+
+           <li>
+                <div class="tuijian_img"><img src="images/p1.jpg" /></div>
+                <div class="tuijian_font"><p><a href="#" target="_blank">韩版2015夏装新款女装青年时尚休闲圆领拼接修身条纹中腰短袖连衣裙</a></p></div>
+                <div class="tuijian_p">
+                    <div class="tuijian_price fl">
+                        <p class="p1">&yen;89</p>
+                        <p class="p2">-80</p>
+                    </div>
+                    <div class="tuijian_ad fr">
+                    <img src="images/tianmao.png" />
+                    <p class="p3">韩都衣舍旗舰店</p>
+                    </div>
+                </div>
+            </li><!--产品展示模块 -->
+
+            <li>
+                <div class="tuijian_img"><img src="images/p1.jpg" /></div>
+                <div class="tuijian_font"><p><a href="#" target="_blank">韩版2015夏装新款女装青年时尚休闲圆领拼接修身条纹中腰短袖连衣裙</a></p></div>
+                <div class="tuijian_p">
+                    <div class="tuijian_price fl">
+                        <p class="p1">&yen;89</p>
+                        <p class="p2">-80</p>
+                    </div>
+                    <div class="tuijian_ad fr">
+                    <img src="images/tianmao.png" />
+                    <p class="p3">韩都衣舍旗舰店</p>
+                    </div>
+                </div>
+            </li><!--产品展示模块 -->
+
+            <li>
+                <div class="tuijian_img"><img src="images/p1.jpg" /></div>
+                <div class="tuijian_font"><p><a href="#" target="_blank">韩版2015夏装新款女装青年时尚休闲圆领拼接修身条纹中腰短袖连衣裙</a></p></div>
+                <div class="tuijian_p">
+                    <div class="tuijian_price fl">
+                        <p class="p1">&yen;89</p>
+                        <p class="p2">-80</p>
+                    </div>
+                    <div class="tuijian_ad fr">
+                    <img src="images/tianmao.png" />
+                    <p class="p3">韩都衣舍旗舰店</p>
+                    </div>
+                </div>
+            </li><!--产品展示模块 -->
+
+            <li>
+                <div class="tuijian_img"><img src="images/p1.jpg" /></div>
+                <div class="tuijian_font"><p><a href="#" target="_blank">韩版2015夏装新款女装青年时尚休闲圆领拼接修身条纹中腰短袖连衣裙</a></p></div>
+                <div class="tuijian_p">
+                    <div class="tuijian_price fl">
+                        <p class="p1">&yen;89</p>
+                        <p class="p2">-80</p>
+                    </div>
+                    <div class="tuijian_ad fr">
+                    <img src="images/tianmao.png" />
+                    <p class="p3">韩都衣舍旗舰店</p>
+                    </div>
+                </div>
+            </li><!--产品展示模块 -->
+        </ul>
+    </div>
+</div>
+</body>
+</html>
